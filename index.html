@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <!-- <div class="wrapper">
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="display-container">
+                <input readonly placeholder="password" class="display" data-passwordDisplay>
+                <button data-copy>
+                    <span data-copied-msg></span>
+                    <img src="./assets/copy.svg" alt="" width="23" height="23">
+                </button>
+
+            </div>
+            <div class="input-container">
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-length>1</p>
+                </div>
+                <input type="range" min="1" max="20" value="1" class="slider" step="1" data-length-slider>
+
+                <div class="checkBoxes">
+                    <div>
+                        <input type="checkbox" name="" id="uppercase">
+                        <label for="uppercase">Include UpperCase letters</label>
+                    </div>
+
+                    <div class="">
+                        <input type="checkbox" name="" id="lowercase">
+                        <label for="lowercase">Include LowerCase letters</label>
+                    </div>
+                    <div class="">
+                        <input type="checkbox" name="" id="number">
+                        <label for="number">Include number</label>
+                    </div>
+                    <div class="">
+                        <input type="checkbox" name="" id="symbol">
+                        <label for="symbol">Include symbol</label>
+                    </div>
+                    strength section
+                </div>
+                <div class="strength-container">
+                    <span>Strength</span>
+                    <div pass-strength class="indicator"></div>
+                </div>
+                generate button
+                <button class="generateButton">
+                    Generate Password
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="wrapper w-[100vw] h-[100vh] flex justify-center items-center flex-col  ">
+        <div class="flex flex-col justify-center items-center gap-2 w-[15%]">
+            <h1 class="text-[#ffffffcc] font-bold text-lg ">PASSWORD GENERATOR</h1>
+            <div class="w-[100%] display-container rounded-lg bg-[color:--dk-violet] px-3 py-3 flex items-center  justify-between">
+                <input readonly
+                    class="bg-[color:--dk-violet] uppercase placeholder-[color:--vb-yellow] text-[color:--vb-yellow] tracking-wider font-bold text-[0.8em]"
+                    type="text" placeholder='Password' class="display" data-passwordDisplay>
+                <button data-copy class="relative">
+                    <span data-copied-msg class="text-white data-copy transition-transform ease-in-out duration-[0.35s] absolute -top-7 -left-4 rounded-lg px-2 text-[color:--vb-yellow] bg-[color:--vb-violet2] text-sm " ></span>
+                    <img src="./assets/copy.svg" alt="copy" width="20px" height="20px">
+                </button>
+            </div>
+            <div class="input-container w-[100%] flex flex-col gap-4 px-3 py-2 bg-[color:--dk-violet] rounded-lg ">
+
+                <div class="length-container text-sm flex justify-between items-center mt-2">
+                    <h4 class="text-white ">Password Length</h4>
+                    <span data-lengthContainer class="text-[color:--vb-yellow]">10</span>
+                </div>
+
+                <input class="slider" type="range" min="1" max="20" value="10" class="slider" step="1" data-length-slider>
+
+                <div class="text-white text-sm  flex flex-col gap-1">
+                    <div class="check my-1 flex gap-3">
+                        <input type="checkbox" name="" id="uppercase"> <label for="uppercase">Include Uppercase
+                            letters</label>
+                    </div>
+                    <div class="check my-1 flex gap-3">
+                        <input type="checkbox" name="" id="lowercase"> <label for="lowercase">Include Lowercase
+                            letters</label>
+                    </div>
+                    <div class="check my-1 flex gap-3">
+                        <input type="checkbox" name="" id="number"> <label for="number">Include Number </label>
+                    </div>
+                    <div class="check my-1 flex gap-3">
+                        <input type="checkbox" name="" id="symbol"> <label for="symbol">Include Symbols</label>
+                    </div>
+                </div>
+                <div class="strength-container flex justify-between items-center">
+                    <p class="text-white"> Strength</p>
+                    <div id="strength-indicator" class="w-[15px] h-[15px] rounded-full " pass-strength></div>
+                </div>
+                <button class="generateButton h-[30px] mb-3 font-semibold text-white text-[0.75em] rounded-lg uppercase bg-[color:--vb-violet]">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
